@@ -53,12 +53,13 @@ for _ in range(2):
 from functools import partial
 
 
-def sum_of_two(a=1, b=2):
+def sum_of_two(a, b):
     print(f'calling sum_of_two, a={a}, b={b}')
     return a + b
 
 
 print(sum_of_two(2, 4))
+
 sum_with_2 = partial(sum_of_two, b=2)
 print(sum_with_2(3))
 

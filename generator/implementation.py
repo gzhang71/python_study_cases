@@ -4,10 +4,10 @@ print('demo for iterator')
 
 class A:
     n = 5
-    lst = [x for x in range(n)]
     _idx = 0
 
     def __iter__(self):
+        self.lst = [x for x in range(self.n)]
         return self
 
     def __next__(self):
